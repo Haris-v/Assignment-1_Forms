@@ -1,0 +1,84 @@
+/* style="border: 1px solid red"*/
+.my-title {
+  padding-bottom: 10px;
+  padding-right: 70px;
+}
+
+.my-stream {
+  padding-bottom: 10px;
+}
+.my-title-label {
+  padding-right: 4px;
+}
+
+.my-selection {
+  margin-left: 14px;
+}
+
+.my-date {
+  margin-top: 10px;
+}
+
+.my-startdate-label {
+  padding-right: 5px;
+}
+.my-enddate {
+  padding-right: 5px;
+  padding-left: 2px;
+}
+
+.my-buttons {
+  margin-top: 15px;
+}
+
+.imgfooter {
+  width: 30px;
+  height: 30px;
+}
+
+.containerfooter {
+  font-size: 20px;
+  font-family: Comic Sans MS;
+  margin-left: 50px;
+  color: #96101ee3;
+}
+
+.headcontact {
+  margin-left: 110px;
+  font-size: 30px;
+  font-weight: 650;
+  margin-left: 50px;
+}
+.tel {
+  margin-right: 60px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.smi {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 20px;
+}
+.facebook {
+  /*position: absolute; */
+  left: 650px;
+  bottom: -180px;
+
+  /* margin-left: 635px; */
+}
+.linkedin {
+  /* position: absolute;
+    left: 775px;
+    bottom: -180px;
+    */
+  margin-left: 95px;
+}
+.youtube {
+  /* position: absolute;
+    left: 890px;
+    bottom: -180px;
+    */
+
+  margin-left: 95px;
+}

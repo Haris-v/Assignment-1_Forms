@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignments</title>
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./css/forAssignments.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+      <!------------------------For Nav Bar------------------------------------->
+      <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-------------------------------------------------------------------------------------------->
+  </head>
+  <body>
+    <div id="container">
+      <header
+        class="jumbotron text-center"
+        style="background-color: rgb(156, 144, 144)"
+      >
+      <h1>DreamCode Academy</h1>
+        <p>We feed your dreams, we grow your reality </p>
+      </header>
+        <!----------------------------------------------Starting of the Navigation Bar--------------------------------------------->
+      <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+        <!----><div class="container-fluid"> 
+          <a href="#" class="navbar-brand">NavBar</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarCollapse"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="nav navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="home.html">Home</a>
+              </li>
+<!-------------------------------------Dropdown Menu for Students------------------------------->
+              
+              <li class="nav-item dropdown ">
+                <a
+                  href="#"
+                  class="nav-link dropdown-toggle"
+                  data-bs-toggle="dropdown"
+                  >Students</a
+                >
+                <div class="dropdown-menu">
+                  <a href="forStundents.html" class="dropdown-item">Students</a>
+                  <a href="forStundentsPerCourse.html" class="dropdown-item">Students per Course</a>
+                </div>
+            </ul>
+            <!--------------------------Dropdown Menu for Trainers------------------------>
+            <ul class="nav navbar-nav">
+              <li class="nav-item dropdown ">
+                <a
+                  href="#"
+                  class="nav-link dropdown-toggle"
+                  data-bs-toggle="dropdown"
+                  >Trainers</a
+                >
+                <div class="dropdown-menu">
+                  <a href="forTrainers.html" class="dropdown-item">Trainers</a>
+                  <a href="forTrainersPerCourse.html" class="dropdown-item">Trainers per Course</a>
+                </div>
+            </ul>
+             
+            <!--------------------------Dropdown Menu for Assignment per Course------------------------>
+            <ul class="nav navbar-nav">
+              <li class="nav-item dropdown active">
+                <a
+                  href="#"
+                  class="nav-link dropdown-toggle"
+                  data-bs-toggle="dropdown"
+                  >Assignment</a
+                >
+                <div class="dropdown-menu">
+                  <a href="forAssignments.html" class="dropdown-item">Assignment</a>
+                  <a href="forAssignmentsPerCourse.html" class="dropdown-item">Assignment per Course</a>
+                  <a href="forAssignmentPerStudentPerCourse.html" class="dropdown-item">Assignment per student per course</a>
+                </div>
+            </ul>
+            <!------------------------------------Menu for Courses--------------------------->
+            <ul class="nav navbar-nav">
+              <li class="nav-item ">
+                <a class="nav-link" href="forCourses.html">Courses</a>
+              </li>
+            </ul>
+            </ul>
+          </div>
+       </div> 
+      </nav>
+    <!--------------------------------------The End of Navigation Bar--------------------------------------------->
+
+    <!---------------------------------Starting of the Form ------------------------------------>
+<div class="row">
+  <div class="col-lg-4 offset-lg-1 my-5">
+    <p class="bg-success bg-gradiebd">
+      <strong>Please fill the form below:</strong>
+    </p>
+    <form action="">
+      <!------------------------------Form of Title--------------------->
+      <div class="form-group">
+        <label for="title">Title</label>
+            <input
+              type="text"
+              class="form-control"
+              id="title"
+              name="title"
+              placeholder="Please insert the title of Assignment"
+              required
+            />
+            <div class="alert alert-danger" id="lastname-error">
+              Success of Failure
+            </div>
+      </div>
+      <!---------------------------------Form of Submition datetime-------------------------->
+      <div class="form-group my-date">
+        <label for="submition-date " class="my-submition-date-label"
+          >Date of submition</label
+        >
+        <input
+          type="datetime-local"
+          class="form-control my-startdate my-inputstartdate"
+          name="submition-date"
+          id="submition-date"
+        />
+      </div>
+        <!-------------------------Nested Grid---------------------------->
+      <div class="row">
+        <div class="col-lg-6 ">
+          <!-----------------------------Nested grid for Oral Mark------------------->
+          <div class="form-group">
+            <label for="oral-mark">Please insert the Oral Mark</label>
+            <input
+              type="number"
+              class="form-control"
+              id="oral-mark"
+              name="oral-mark"
+              maxlength="3"
+              placeholder="Numbers only"
+              min=1
+              required
+            />
+            <div class="alert alert-danger" id="oral-mark-error">
+              Success of Failure
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 ">
+          <!-----------------------------Nested grid for Total Mark------------------->
+          <div class="form-group">
+            <label for="total-mark">Please insert the Total Mark</label>
+            <input
+              type="number"
+              class="form-control total-mark"
+              id="total-mark"
+              name="total-mark"
+              maxlength="3"
+              placeholder="Numbers only"
+              min=1
+              required
+            />
+            <div class="alert alert-danger" id="total-mark-error">
+              Success of Failure
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--------------------------End of Nested Grid-------------------------------------->
+      <div class="form-group">
+        <label for="description">Description:</label>
+        <textarea class="form-control" rows="10" id="description" name="description"></textarea>
+      </div>
+      <button type="submit" class="btn btn-info add">Add</button>
+      <button type="submit" class="btn btn-danger edit">Clear</button>
+    </form>
+  </div>
+  <!-------------------------------------Second Form-------------------------------------->
+  <div class="col-lg-4 offset-lg-1 my-5">
+    <p class="bg-success bg-gradiebd">
+      <strong>Please fill the form below:</strong>
+    </p>
+    <form action="">
+      <!------------------------------Form of Title--------------------->
+      <div class="form-group">
+        <label for="title-2">Title</label>
+            <input
+              type="text"
+              class="form-control"
+              id="title-2"
+              name="title-2"
+              placeholder="Please insert the title of Assignment"
+              required
+            />
+            <div class="alert alert-danger" id="title-error-2">
+              Success of Failure
+            </div>
+      </div>
+      <!---------------------------------Form of Submition datetime-------------------------->
+      <div class="form-group my-date">
+        <label for="submition-date-2" class="my-submition-date-label"
+          >Date of submition</label
+        >
+        <input
+          type="datetime-local"
+          class="form-control my-startdate my-inputstartdate"
+          name="submition-date-2"
+          id="submition-date-2"
+        />
+      </div>
+        <!-------------------------Nested Grid---------------------------->
+      <div class="row">
+        <div class="col-lg-6 ">
+          <!-----------------------------Nested grid for Oral Mark------------------->
+          <div class="form-group">
+            <label for="oral-mark-2">Please insert the Oral Mark</label>
+            <input
+              type="number"
+              class="form-control"
+              id="oral-mark-2"
+              name="oral-mark-2"
+              maxlength="3"
+              placeholder="Numbers only"
+              min=1
+              required
+            />
+            <div class="alert alert-danger" id="oral-mark-error-2">
+              Success of Failure
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 ">
+          <!-----------------------------Nested grid for Total Mark------------------->
+          <div class="form-group">
+            <label for="total-mark-2">Please insert the Total Mark</label>
+            <input
+              type="number"
+              class="form-control"
+              id="total-mark-2"
+              name="total-mark-2"
+              maxlength="3"
+              placeholder="Numbers only"
+              min="1"
+              required
+            />
+            <div class="alert alert-danger" id="total-mark-error-2">
+              Success of Failure
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--------------------------End of Nested Grid-------------------------------------->
+      <div class="form-group">
+        <label for="description">Description:</label>
+        <textarea class="form-control" rows="10" id="description" name="description"></textarea>
+      </div>
+      <button type="submit" class="btn btn-info edit">Edit</button>
+      <button type="submit" class="btn btn-danger edit">Clear</button>
+    </form>
+  </div>
+</div>
+
+
+
+    
+    <footer class="jumbotron text-center">
+      <!-- <div class="row"> 
+        <div id="col-lg-4"> -->
+      <div class=""></div>
+      <a href="https://www.facebook.com" target="_blank">
+        <img
+          src="./images/facebookicon.png"
+          alt="FaceBook image"
+          class="smi facebook"
+        />
+      </a>
+
+      <!--<div id="col-lg-4"> -->
+      <a href="https://www.linkedin.com" target="_blank">
+        <img
+          src="./images/linkedin.png"
+          alt="Linkedin image"
+          class="smi linkedin"
+      /></a>
+
+      <!-- <div id="col-lg-4">-->
+      <a href="https://www.youtube.com" target="_blank">
+        <img src="./images/youtube.png" alt="youtube image" class="smi youtube"
+      /></a>
+
+      <p class="headcontact">Contact us</p>
+      <div class="containerfooter">
+        <div>
+          <img
+            src="./images/Location_Icon-512.png"
+            alt="Location arrow icon"
+            class="imgfooter"
+          />Κυψέλης 61, Αθήνα 113 62
+        </div>
+        <div class="tel">
+          <img
+            src="./images/telephone1.png"
+            alt="telephone icon"
+            class="imgfooter"
+          />+30-2109899999
+        </div>
+        <div>
+          <img src="./images/emailicon.png" alt="emai icon" class="imgfooter" />
+          harveraros@gmail.com
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      $(document).ready(function () {
+
+        
+        $("#lastname-error").hide();
+        $("#title-error-2").hide();
+        $("#oral-mark-error").hide();
+        $("#oral-mark-error-2").hide();
+        $("#total-mark-error").hide();
+        $("#total-mark-error-2").hide();
+
+
+
+        var error_lname = "";
+        var error_tname = "";
+        var error_omark = "";
+        var error_omark2 = "";
+        var error_tmark = "";
+        var error_tmark2 = "";
+
+     
+        $("#lastname").focusout(function () {
+          checkLastName();
+        });
+
+        $("#title-2").focusout(function () {
+          checkTitle();
+        });
+        $("#oral-mark").focusout(function () {
+          checkOralMark();
+        });
+        $("#oral-mark-2").focusout(function () {
+          checkOralMark2();
+        });
+        $("#total-mark").focusout(function () {
+          checkTotalMark();
+        });
+        $("#total-mark-2").focusout(function () {
+          checkTotalMark2();
+        });
+
+        function checkTitle() {
+          var pattern = /^[a-zA-Z]*$/;
+          var tile2 = $("#title-2").val();
+          if (pattern.test(title2) && title2 !== "") {
+            $("#title-error-2").hide();
+            $("#title-2").css({ "border-bottom": "2px solid #34f458" });
+            $("input[type=text]").val(function () {
+              return this.value.toUpperCase();
+            });
+          } else {
+            $("#title-error-2")
+              .show()
+              .html("Should contain only characters!");
+            error_tname = "true";
+          }
+        }
+
+        function checkLastName() {
+          var pattern = /^[a-zA-Z]*$/;
+          var lastName = $("#lastname").val();
+          if (pattern.test(lastName) && lastName !== "") {
+            $("#lastname-error").hide();
+            $("#lastname").css({ "border-bottom": "2px solid #34f458" });
+            $("input[type=text]").val(function () {
+              return this.value.toUpperCase();
+            });
+          } else {
+            $("#lastname-error").show().html("Should contain only characters!");
+            error_lname = "true";
+          }
+        }
+
+        function checkOralMark() {
+          var pattern = /^[0-9]*$/;
+          var oralMark = $("#oral-mark").val();
+          if (pattern.test(oralMark) && oralMark !== "") {
+            $("#oral-mark-error").hide();
+            $("#oral-mark").css({ "border-bottom": "2px solid #34f458" });
+            $("input[type=text]").val(function () {
+              return this.value.toUpperCase();
+            });
+          } else {
+            $("#oral-mark-error").show().html("Should contain only numbers!");
+            error_omark = "true";
+          }
+        }
+
+        function checkOralMark2() {
+          var pattern = /^[0-9]*$/;
+          var oralMark2 = $("#oral-mark-2").val();
+          if (pattern.test(oralMark2) && oralMark2 !== "") {
+            $("#oral-mark-error-2").hide();
+            $("#oral-mark-2").css({ "border-bottom": "2px solid #34f458" });
+            $("input[type=text]").val(function () {
+              return this.value.toUpperCase();
+            });
+          } else {
+            $("#oral-mark-error-2").show().html("Should contain only numbers!");
+            error_omark2 = "true";
+          }
+        }
+
+        function checkTotalMark() {
+          var pattern = /^[0-9]*$/;
+          var totalMark = $("#total-mark").val();
+          if (pattern.test(totalMark) && totalMark !== "") {
+            $("#total-mark-error").hide();
+            $("#total-mark").css({ "border-bottom": "2px solid #34f458" });
+            $("input[type=text]").val(function () {
+              return this.value.toUpperCase();
+            });
+          } else {
+            $("#total-mark-error").show().html("Should contain only numbers!");
+            error_tmark = "true";
+          }
+        }
+
+        function checkTotalMark2() {
+          var pattern = /^[0-9]*$/;
+          var totalMark2 = $("#total-mark-2").val();
+          if (pattern.test(totalMark2) && totalMark2 !== "") {
+            $("#total-mark-error-2").hide();
+            $("#total-mark-2").css({ "border-bottom": "2px solid #34f458" });
+            $("input[type=text]").val(function () {
+              return this.value.toUpperCase();
+            });
+          } else {
+            $("#total-mark-error-2").show().html("Should contain only numbers!");
+            error_tmark2 = "true";
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

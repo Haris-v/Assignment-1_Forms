@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For Students Per Course</title>
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./css/forTrainersPerCourse.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!------------------------For Nav Bar------------------------------------->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-------------------------------------------------------------------------------------------->
+
+    <!-------------------------------For Button----------------------------------->
+
+    <!--<link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous"
+  /> -->
+
+  <!----------------------------------------------------------------------------->
+  </head>
+  <body>
+    <div id="container">
+        <header
+          class="jumbotron text-center"
+          style="background-color: rgb(156, 144, 144)"
+        >
+        <h1>DreamCode Academy</h1>
+        <p>We feed your dreams, we grow your reality </p>
+        </header>
+        <!-------------------------------------Starting of the Navigation Bar--------------------------------->
+       <!-- <div class="m-4">-->
+          <nav class="navbar navbar-expand-lg bg-dark navbar-dark" >
+            <!----><div class="container-fluid"> 
+              <a href="#" class="navbar-brand">NavBar</a>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarCollapse"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="nav navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="home.html">Home</a>
+                  </li>
+  <!-------------------------------------Dropdown Menu for Students------------------------------->
+                  
+                  <li class="nav-item dropdown ">
+                    <a
+                      href="#"
+                      class="nav-link dropdown-toggle"
+                      data-bs-toggle="dropdown"
+                      >Students</a
+                    >
+                    <div class="dropdown-menu">
+                      <a href="forStundents.html" class="dropdown-item">Students</a>
+                      <a href="forStundentsPerCourse.html" class="dropdown-item">Students per Course</a>
+                    </div>
+                </ul>
+                <!--------------------------Dropdown Menu for Trainers------------------------>
+                <ul class="nav navbar-nav ">
+                  <li class="nav-item dropdown active">
+                    <a
+                      href="#"
+                      class="nav-link dropdown-toggle"
+                      data-bs-toggle="dropdown"
+                      >Trainers</a
+                    >
+                    <div class="dropdown-menu">
+                      <a href="forTrainers.html" class="dropdown-item">Trainers</a>
+                      <a href="forTrainersPerCourse.html" class="dropdown-item">Trainers per Course</a>
+                    </div>
+                </ul>
+                 
+                <!--------------------------Dropdown Menu for Assignment per Course------------------------>
+                <ul class="nav navbar-nav">
+                  <li class="nav-item dropdown">
+                    <a
+                      href="#"
+                      class="nav-link dropdown-toggle"
+                      data-bs-toggle="dropdown"
+                      >Assignment</a
+                    >
+                    <div class="dropdown-menu">
+                      <a href="forAssignments.html" class="dropdown-item">Assignment</a>
+                      <a href="forAssignmentsPerCourse.html" class="dropdown-item">Assignment per Course</a>
+                      <a href="forAssignmentPerStudentPerCourse.html" class="dropdown-item">Assignment per student per course</a>
+                    </div>
+                </ul>
+                <ul class="nav navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="forCourses.html">Courses</a>
+                  </li>
+                </ul>
+                </ul>
+              </div>
+           </div> 
+          </nav>
+          </div>
+   <!---------------------------------------Start of Form----------------------------------------------->
+
+          <div class="row">
+            <div class="col-lg-4 offset-lg-1 my-5">
+
+                <p class="bg-success bg-gradiebd">
+                    <strong>Please Select the fields properly:</strong>
+                  </p>
+            <form action="" >
+                <!-------------------------------------Course selection--------------------->
+                <!-------------------------------------Starting From Trainer-------------------->
+
+                <div class="row style=">
+                  <div class="col-lg-6 offset-lg-0">
+                    <!-----------------------------------Form of Firstname------------------------->
+                    <div class="form-group">
+                      <label for="firstname">First Name</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="firstname"
+                        name="firstname"
+                        placeholder="e.g. Haris"
+                        maxlength="20"
+                        required
+                      />
+                    </div>
+      
+                    <div class="alert invalid-feedback" id="firstname-error">
+                      Success of Failure
+                    </div>
+                  </div>
+                  <!-----------------------------------Form of Lastname------------------------->
+      
+                  <div class="col-lg-6 offset-lg-0">
+                    <div class="form-group">
+                      <label for="lastname">last Name</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="lastname"
+                        name="lastname"
+                        placeholder="e.g. Veraros"
+                        maxlength="20"
+                        required
+                      />
+                    </div>
+                    <div class="alert invalid-feedback" id="lastname-error">
+                      Success of Failure
+                    </div>
+                  </div>
+                </div>
+      
+                <div class="form-group">
+                  <label for="subject">Subject</label>
+                  <input
+                    type="text"
+                    class="form-control "
+                    id="subject"
+                    name="subject"
+                    placeholder="e.g. Javascript "
+                    maxlength="20"
+                    required
+                  />
+                </div>
+
+                <!----------------------------------------Ending from Trainers--------------------------->
+
+                <!-----------------------------------------Start per Course-------------------->
+               <!-- class="form-inline" -->
+               <!--------------------------------------------Starting Nested Grid------------------------->
+               <div class="row">
+                <div class="col-lg-6 ">
+            <!--------------------------------------Starting Nested Grid of Select Course------------------->
+                  <div class="form-group">
+                    <label for="course-selection " class="my-select-label">Choose the Course </label>
+                    <select class="custom-select custom-select-dm  my-select " id="course-selection " name="course-selection ">
+                      <option selected>Select Course...</option>
+                      <optgroup label="Front-end">
+                        <option>Css/Bootstrap</option>
+                        <option>HTML</option>
+                        <option>Javascript</option>
+                      </optgroup>
+                      <optgroup label="Back-end">
+                        <option>Java</option>
+                        <option>C#</option>
+                        <option>Python</option>
+                        <option>C++</option>
+                      </optgroup>
+                    </select>
+                 </div>
+                </div>
+            <!--------------------------------------Ending Nested Grid of Select Course------------------->
+            <!--------------------------------------Starting Nested Grid of Type Course------------------->
+
+                <div class="col-lg-6 ">
+                  <div class="form-group">
+                    <label for="course-selection-type " class="my-selection-label">Type Course  </label>
+                    <select class="custom-select   custom-select-dm my-selection-type" id="course-selection-type" name="course-selection-type" >
+                      <option selected>Choose... </option>
+                      <option value="1">Full-time</option>
+                      <option value="2">Part-time</option>
+                    </select>
+                  </div>
+
+                </div>
+
+               </div>
+
+
+                    
+<!------------------------------------------------Starting  Button for choice Students----------------------------->
+                  
+                      <div class="form-group ">
+                        
+                        <!-- Trigger the modal with a button -->
+                        <button
+                          type="button"
+                          class="btn btn-info  big-button"
+                          data-toggle="modal"
+                          data-target="#myModal"
+                        >
+                          Select Trainer
+                        </button>
+                  
+                        <!-- Modal -->
+                        <div class="modal fade" id="myModal" role="dialog">
+                          <div class="modal-dialog">
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">
+                                  &times;
+                                </button>
+                                Close
+                              </div>
+                              <div class="modal-body">
+                                <div class="without-message"> Please, Choose a Course <br/></div>    
+                                 <!---------------------------------------------Java Trainers------------------------------->
+                                    <div class="java"> Java Trainers
+                                      <br/>
+                                      <div class="form-check form-check-inline">
+                                        <input
+                                          class="form-check-input"
+                                          type="checkbox"
+                                          id="inlineCheckbox1"
+                                          value="option1"
+                                        />
+                                        <label class="form-check-label" for="inlineCheckbox1"
+                                          >Papagianopoulos</label
+                                        >
+                                      </div>
+                                      
+                                <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                                  <label class="form-check-label" for="inlineCheckbox2">gerorgakopoulos</label>
+                                </div>
+                                        <div class="form-check form-check-inline">
+                    <input class="form-check-input option3" type="checkbox" id="inlineCheckbox3" value="option3" >
+                    <label class="form-check-label" for="inlineCheckbox3">papadakis</label>
+                  </div>
+                  </div>
+                  <!----------------------------------------------------------C# Trainers---------------------------------------------------->
+                  <div class="c"> C# Trainers
+                    <br/>
+                    <div class="form-check form-check-inline">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        id="inlineCheckbox1"
+                        value="option1"
+                      />
+                      <label class="form-check-label" for="inlineCheckbox1"
+                        >Papagianopoulos C#</label
+                      >
+                    </div>
+                    
+                  <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                  <label class="form-check-label" for="inlineCheckbox2">gerorgakopoulos C#</label>
+                  </div>
+                      <div class="form-check form-check-inline">
+                  <input class="form-check-input option3" type="checkbox" id="inlineCheckbox3" value="option3" >
+                  <label class="form-check-label" for="inlineCheckbox3">papadakis C#</label>
+                  </div>
+                  </div>
+                  <!-----------------------------------------------End of C#------------------------------------------------------------->
+                  <!----------------------------------------------Start if python----------------------------------------------->
+                  <div class="python"> Python Trainers
+                    <br/>
+                    <div class="form-check form-check-inline">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        id="inlineCheckbox1"
+                        value="option1"
+                      />
+                      <label class="form-check-label" for="inlineCheckbox1"
+                        >Papagianopoulos python</label
+                      >
+                    </div>
+                    
+                  <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                  <label class="form-check-label" for="inlineCheckbox2">gerorgakopoulos python</label>
+                  </div>
+                      <div class="form-check form-check-inline">
+                  <input class="form-check-input option3" type="checkbox" id="inlineCheckbox3" value="option3" >
+                  <label class="form-check-label" for="inlineCheckbox3">papadakis python</label>
+                  </div>
+                  </div>
+                  <!----------------------------------------------End of python---------------------------------------------------->
+                  <!----------------------------------------------Starting of C++---------------------------------------------------->
+                  <div class="c++"> C++ Trainers
+                    <br/>
+                    <div class="form-check form-check-inline">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        id="inlineCheckbox1"
+                        value="option1"
+                      />
+                      <label class="form-check-label" for="inlineCheckbox1"
+                        >Papagianopoulos C++</label
+                      >
+                    </div>
+                    
+                  <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                  <label class="form-check-label" for="inlineCheckbox2">gerorgakopoulos C++</label>
+                  </div>
+                      <div class="form-check form-check-inline">
+                  <input class="form-check-input option3" type="checkbox" id="inlineCheckbox3" value="option3" >
+                  <label class="form-check-label" for="inlineCheckbox3">papadakis C++</label>
+                  </div>
+                  </div>
+                  <!----------------------------------------------End of C++---------------------------------------------------->
+                  <!----------------------------------------------Starting of Css/Bootstrap---------------------------------------------------->
+                  <div class="css-bootstrap"> Css/Bootstrap Trainers
+                    <br/>
+                    <div class="form-check form-check-inline">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        id="inlineCheckbox1"
+                        value="option1"
+                      />
+                      <label class="form-check-label" for="inlineCheckbox1"
+                        >Papagianopoulos Css/Bootstrap</label
+                      >
+                    </div>
+                    
+                  <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                  <label class="form-check-label" for="inlineCheckbox2">gerorgakopoulos Css/Bootstrap</label>
+                  </div>
+                      <div class="form-check form-check-inline">
+                  <input class="form-check-input option3" type="checkbox" id="inlineCheckbox3" value="option3" >
+                  <label class="form-check-label" for="inlineCheckbox3">papadakis Css/Bootstrap</label>
+                  </div>
+                  </div>
+
+                  <!----------------------------------------------Ending of Css/Bootstrap---------------------------------------------------->
+                  <!----------------------------------------------Starting of Javascripy---------------------------------------------------->
+
+                  <div class="javascript"> Javascript Trainers
+                    <br/>
+                    <div class="form-check form-check-inline">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        id="inlineCheckbox1"
+                        value="option1"
+                      />
+                      <label class="form-check-label" for="inlineCheckbox1"
+                        >Papagianopoulos Javascript</label
+                      >
+                    </div>
+                    
+                  <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                  <label class="form-check-label" for="inlineCheckbox2">gerorgakopoulos Javascript</label>
+                  </div>
+                      <div class="form-check form-check-inline">
+                  <input class="form-check-input option3" type="checkbox" id="inlineCheckbox3" value="option3" >
+                  <label class="form-check-label" for="inlineCheckbox3">papadakis Javascript</label>
+                  </div>
+                  </div>
+                   <!----------------------------------------------Ending of Javascript---------------------------------------------------->
+                   
+                   <!----------------------------------------------Starting of HTML---------------------------------------------------->
+
+                   <div class="html"> HTML Trainers
+                    <br/>
+                    <div class="form-check form-check-inline">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        id="inlineCheckbox1"
+                        value="option1"
+                      />
+                      <label class="form-check-label" for="inlineCheckbox1"
+                        >Papagianopoulos HTML</label
+                      >
+                    </div>
+                    
+                  <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                  <label class="form-check-label" for="inlineCheckbox2">gerorgakopoulos HTML</label>
+                  </div>
+                      <div class="form-check form-check-inline">
+                  <input class="form-check-input option3" type="checkbox" id="inlineCheckbox3" value="option3" >
+                  <label class="form-check-label" for="inlineCheckbox3">papadakis HTML</label>
+                  </div>
+                  </div>
+                    <!----------------------------------------------Ending of HTML---------------------------------------------------->
+
+                                </p>
+                              </div>
+                              <div class="modal-footer">
+                  <!------------------------------------------Edit Button---------------------->
+                                <button
+                                type="button"
+                                class="btn btn-default my-edit-button"
+                                data-dismiss="modal"
+                              >
+                                Edit
+                              </button>
+                  <!--------------------------------Close Button------------------------->
+                  
+                                <button
+                                  type="button"
+                                  class="btn btn-default my-close-button"
+                                  data-dismiss="modal"
+                                >
+                                  Close
+                                </button>                                
+                              </div>                             
+                            </div>                          
+                          </div>                        
+                        </div>
+                        <button type="submit" class="btn btn-danger clear">Clear</button>
+                        <button type="submit" class="btn btn-info add">Add</button>
+                       </div>
+<!------------------------------------------------Ending Button for choice Students----------------------------->
+                      </div>
+                    </form>
+          <!--==================================Second Form--===============================-->
+          <div class="col-lg-4 offset-lg-1 my-5">
+
+            <p class="bg-success bg-gradiebd">
+                <strong>Please Select the fields properly:</strong>
+              </p>
+        <form action="" >
+            <!-------------------------------------Course selection--------------------->
+            <!-------------------------------------Starting From Trainer-------------------->
+
+            <div class="row style=">
+              <div class="col-lg-6 offset-lg-0">
+                <!-----------------------------------Form of Firstname------------------------->
+                <div class="form-group">
+                  <label for="firstname">First Name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="firstname"
+                    name="firstname"
+                    placeholder="e.g. Haris"
+                    maxlength="20"
+                    required
+                  />
+                </div>
+  
+                <div class="alert invalid-feedback" id="firstname-error">
+                  Success of Failure
+                </div>
+              </div>
+              <!-----------------------------------Form of Lastname------------------------->
+  
+              <div class="col-lg-6 offset-lg-0">
+                <div class="form-group">
+                  <label for="lastname">last Name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="lastname"
+                    name="lastname"
+                    placeholder="e.g. Veraros"
+                    maxlength="20"
+                    required
+                  />
+                </div>
+                <div class="alert invalid-feedback" id="lastname-error">
+                  Success of Failure
+                </div>
+              </div>
+            </div>
+  
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input
+                type="text"
+                class="form-control "
+                id="subject"
+                name="subject"
+                placeholder="e.g. Javascript "
+                maxlength="20"
+                required
+              />
+            </div>
+
+            <!----------------------------------------Ending from Trainers--------------------------->
+
+            <!-----------------------------------------Start per Course-------------------->
+           <!-- class="form-inline" -->
+           <!--------------------------------------------Starting Nested Grid------------------------->
+           <div class="row">
+            <div class="col-lg-6 ">
+        <!--------------------------------------Starting Nested Grid of Select Course------------------->
+              <div class="form-group">
+                <label for="course-selection " class="my-select-label">Choose the Course </label>
+                <select class="custom-select custom-select-dm  my-select " id="course-selection " name="course-selection ">
+                  <option selected>Select Course...</option>
+                  <optgroup label="Front-end">
+                    <option>Css/Bootstrap</option>
+                    <option>HTML</option>
+                    <option>Javascript</option>
+                  </optgroup>
+                  <optgroup label="Back-end">
+                    <option>Java</option>
+                    <option>C#</option>
+                    <option>Python</option>
+                    <option>C++</option>
+                  </optgroup>
+                </select>
+             </div>
+            </div>
+        <!--------------------------------------Ending Nested Grid of Select Course------------------->
+        <!--------------------------------------Starting Nested Grid of Type Course------------------->
+
+            <div class="col-lg-6 ">
+              <div class="form-group">
+                <label for="course-selection-type " class="my-selection-label">Type Course  </label>
+                <select class="custom-select   custom-select-dm my-selection-type" id="course-selection-type" name="course-selection-type" >
+                  <option selected>Choose... </option>
+                  <option value="1">Full-time</option>
+                  <option value="2">Part-time</option>
+                </select>
+              </div>
+
+            </div>
+
+           </div>
+
+
+                
+<!------------------------------------------------Starting  Button for choice Students----------------------------->
+              
+                  <div class="form-group ">
+                    
+                    <!-- Trigger the modal with a button -->
+                    <button
+                      type="button"
+                      class="btn btn-info  big-button"
+                      data-toggle="modal"
+                      data-target="#myModal"
+                    >
+                      Select Trainer
+                    </button>
+              
+                    <!-- Modal -->
+                    <div class="modal fade" id="myModal" role="dialog">
+                      <div class="modal-dialog">
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">
+                              &times;
+                            </button>
+                            Close
+                          </div>
+                          <div class="modal-body">
+                            <div class="without-message"> Please, Choose a Course <br/></div>    
+                             <!---------------------------------------------Java Trainers------------------------------->
+                                <div class="java"> Java Trainers
+                                  <br/>
+                                  <div class="form-check form-check-inline">
+                                    <input
+                                      class="form-check-input"
+                                      type="checkbox"
+                                      id="inlineCheckbox1"
+                                      value="option1"
+                                    />
+                                    <label class="form-check-label" for="inlineCheckbox1"
+                                      >Papagianopoulos</label
+                                    >
+                                  </div>
+                                  
+                            <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                              <label class="form-check-label" for="inlineCheckbox2">gerorgakopoulos</label>
+                            </div>
+                                    <div class="form-check form-check-inline">
+                <input class="form-check-input option3" type="checkbox" id="inlineCheckbox3" value="option3" >
+                <label class="form-check-label" for="inlineCheckbox3">papadakis</label>
+              </div>
+              </div>
+              <!----------------------------------------------------------C# Trainers---------------------------------------------------->
+              <div class="c"> C# Trainers
+                <br/>
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="inlineCheckbox1"
+                    value="option1"
+                  />
+                  <label class="form-check-label" for="inlineCheckbox1"
+                    >Papagianopoulos C#</label
+                  >
+                </div>
+                
+              <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+              <label class="form-check-label" for="inlineCheckbox2">gerorgakopoulos C#</label>
+              </div>
+                  <div class="form-check form-check-inline">
+              <input class="form-check-input option3" type="checkbox" id="inlineCheckbox3" value="option3" >
+              <label class="form-check-label" for="inlineCheckbox3">papadakis C#</label>
+              </div>
+              </div>
+              <!-----------------------------------------------End of C#------------------------------------------------------------->
+              <!----------------------------------------------Start if python----------------------------------------------->
+              <div class="python"> Python Trainers
+                <br/>
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="inlineCheckbox1"
+                    value="option1"
+                  />
+                  <label class="form-check-label" for="inlineCheckbox1"
+                    >Papagianopoulos python</label
+                  >
+                </div>
+                
+              <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+              <label class="form-check-label" for="inlineCheckbox2">gerorgakopoulos python</label>
+              </div>
+                  <div class="form-check form-check-inline">
+              <input class="form-check-input option3" type="checkbox" id="inlineCheckbox3" value="option3" >
+              <label class="form-check-label" for="inlineCheckbox3">papadakis python</label>
+              </div>
+              </div>
+              <!----------------------------------------------End of python---------------------------------------------------->
+              <!----------------------------------------------Starting of C++---------------------------------------------------->
+              <div class="c++"> C++ Trainers
+                <br/>
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="inlineCheckbox1"
+                    value="option1"
+                  />
+                  <label class="form-check-label" for="inlineCheckbox1"
+                    >Papagianopoulos C++</label
+                  >
+                </div>
+                
+              <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+              <label class="form-check-label" for="inlineCheckbox2">gerorgakopoulos C++</label>
+              </div>
+                  <div class="form-check form-check-inline">
+              <input class="form-check-input option3" type="checkbox" id="inlineCheckbox3" value="option3" >
+              <label class="form-check-label" for="inlineCheckbox3">papadakis C++</label>
+              </div>
+              </div>
+              <!----------------------------------------------End of C++---------------------------------------------------->
+              <!----------------------------------------------Starting of Css/Bootstrap---------------------------------------------------->
+              <div class="css-bootstrap"> Css/Bootstrap Trainers
+                <br/>
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="inlineCheckbox1"
+                    value="option1"
+                  />
+                  <label class="form-check-label" for="inlineCheckbox1"
+                    >Papagianopoulos Css/Bootstrap</label
+                  >
+                </div>
+                
+              <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+              <label class="form-check-label" for="inlineCheckbox2">gerorgakopoulos Css/Bootstrap</label>
+              </div>
+                  <div class="form-check form-check-inline">
+              <input class="form-check-input option3" type="checkbox" id="inlineCheckbox3" value="option3" >
+              <label class="form-check-label" for="inlineCheckbox3">papadakis Css/Bootstrap</label>
+              </div>
+              </div>
+
+              <!----------------------------------------------Ending of Css/Bootstrap---------------------------------------------------->
+              <!----------------------------------------------Starting of Javascripy---------------------------------------------------->
+
+              <div class="javascript"> Javascript Trainers
+                <br/>
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="inlineCheckbox1"
+                    value="option1"
+                  />
+                  <label class="form-check-label" for="inlineCheckbox1"
+                    >Papagianopoulos Javascript</label
+                  >
+                </div>
+                
+              <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+              <label class="form-check-label" for="inlineCheckbox2">gerorgakopoulos Javascript</label>
+              </div>
+                  <div class="form-check form-check-inline">
+              <input class="form-check-input option3" type="checkbox" id="inlineCheckbox3" value="option3" >
+              <label class="form-check-label" for="inlineCheckbox3">papadakis Javascript</label>
+              </div>
+              </div>
+               <!----------------------------------------------Ending of Javascript---------------------------------------------------->
+               
+               <!----------------------------------------------Starting of HTML---------------------------------------------------->
+
+               <div class="html"> HTML Trainers
+                <br/>
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="inlineCheckbox1"
+                    value="option1"
+                  />
+                  <label class="form-check-label" for="inlineCheckbox1"
+                    >Papagianopoulos HTML</label
+                  >
+                </div>
+                
+              <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+              <label class="form-check-label" for="inlineCheckbox2">gerorgakopoulos HTML</label>
+              </div>
+                  <div class="form-check form-check-inline">
+              <input class="form-check-input option3" type="checkbox" id="inlineCheckbox3" value="option3" >
+              <label class="form-check-label" for="inlineCheckbox3">papadakis HTML</label>
+              </div>
+              </div>
+                <!----------------------------------------------Ending of HTML---------------------------------------------------->
+
+                            </p>
+                          </div>
+                          <div class="modal-footer">
+              <!------------------------------------------Edit Button---------------------->
+                            <button
+                            type="button"
+                            class="btn btn-default my-edit-button"
+                            data-dismiss="modal"
+                          >
+                            Edit
+                          </button>
+              <!--------------------------------Close Button------------------------->
+              
+                            <button
+                              type="button"
+                              class="btn btn-default my-close-button"
+                              data-dismiss="modal"
+                            >
+                              Close
+                            </button>  
+                                                          
+                          </div>     
+                                                  
+                        </div>   
+                                               
+                      </div>   
+                                           
+                    </div>
+                    <button type="submit" class="btn btn-danger clear-right">Clear</button>
+                    <button type="submit" class="btn btn-info edit-right">Edit</button>
+                  </div>
+<!------------------------------------------------Ending Button for choice Students----------------------------->
+                  </div>
+                </form>
+          </div>
+
+
+
+   <!---------------------------------------End of Form----------------------------------------------->
+          <!----------------------------Begin of Footer-------------------------->
+    <footer class="jumbotron text-center">
+        <!-- <div class="row"> 
+          <div id="col-lg-4"> -->
+        <div class=""></div>
+        <a href="https://www.facebook.com" target="_blank">
+          <img
+            src="./images/facebookicon.png"
+            alt="FaceBook image"
+            class="smi facebook"
+          />
+        </a>
+  
+        <!--<div id="col-lg-4"> -->
+        <a href="https://www.linkedin.com" target="_blank">
+          <img
+            src="./images/linkedin.png"
+            alt="Linkedin image"
+            class="smi linkedin"
+        /></a>
+  
+        <!-- <div id="col-lg-4">-->
+        <a href="https://www.youtube.com" target="_blank">
+          <img src="./images/youtube.png" alt="youtube image" class="smi youtube"
+        /></a>
+  
+        <p class="headcontact">Contact us</p>
+        <div class="containerfooter">
+          <div>
+            <img
+            src="./images/Location_Icon-512.png"
+            alt="Location arrow icon"
+            class="imgfooter"
+          />Κυψέλης 61, Αθήνα 113 62
+        </div>
+        <div class="tel">
+          <img
+            src="./images/telephone1.png"
+            alt="telephone icon"
+            class="imgfooter"
+          />+30-2109899999
+        </div>
+          <div>
+            <img src="./images/emailicon.png" alt="emai icon" class="imgfooter" />
+            harveraros@gmail.com
+          </div>
+        </div>
+      </footer>
+      <!---------------------------------End of Footer--------------------------------------------------->
+
+      <!--------------------------For New Button-------------------------------------------->
+  <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+      <!------------------------------------------------------------------------------------>
+      <script>
+
+          $("document").ready(function(){
+
+//====================================FOR VALIDATION==================================
+
+            $("#firstname-error").hide();
+        $("#lastname-error").hide();
+        $("#tuitionfees-error").hide();
+
+        var error_fname = "";
+        var error_lname = "";
+        var error_tfees = "";
+        $("#firstname").focusout(function () {
+          checkFirstName();
+        });
+        $("#lastname").focusout(function () {
+          checkLastName();
+        });
+
+        $("#tuitionfees").focusout(function () {
+          checkTuitionFees();
+        });
+
+        function checkTuitionFees() {
+          var pattern = /^[0-9]*$/;
+          var tuitionFees = $("#tuitionfees").val();
+
+          if (pattern.test(tuitionFees) && tuitionFees !== "") {
+            $("#tuitionfees-error").hide();
+            $("#tuitionfees").css({ "border-bottom": "2px solid #34f458" });
+            $("input[type=text]").val(function () {
+              return this.value.toUpperCase();
+            });
+          } else {
+            $("#tuitionfees-error")
+              .show()
+              .html("Should contain only numbers!");
+              error_tfees = "true";
+          }
+        }
+
+        function checkFirstName() {
+          var pattern = /^[a-zA-Z]*$/;
+          var firstName = $("#firstname").val();
+
+          console.log(firstName);
+          //console.log(lastName);
+          if (pattern.test(firstName) && firstName !== "") {
+            $("#firstname-error").hide();
+            $("#firstname").css({ "border-bottom": "2px solid #34f458" });
+            $("input[type=text]").val(function () {
+              return this.value.toUpperCase();
+            });
+          } else {
+            $("#firstname-error")
+              .show()
+              .html("Should contain only characters!");
+            error_fname = "true";
+          }
+        }
+
+        function checkLastName() {
+          var pattern = /^[a-zA-Z]*$/;
+          var lastName = $("#lastname").val();
+          if (pattern.test(lastName) && lastName !== "") {
+            $("#lastname-error").hide();
+            $("#lastname").css({ "border-bottom": "2px solid #34f458" });
+            $("input[type=text]").val(function () {
+              return this.value.toUpperCase();
+            });
+          } else {
+            $("#lastname-error")
+              .show()
+              .html("Should contain only characters!");
+            error_fname = "true";
+          }
+        }
+
+//=================================FOR BUTTON====================================
+            let hideCourse = function(){
+                $(".c").hide();
+            $(".java").hide();
+            $(".python").hide();
+            $(".c++").hide();
+            $(".css-bootstrap").hide();
+            $(".javascript").hide();
+            $(".html").hide();
+                            
+            }
+
+            hideCourse();
+           
+            let optionCourse =0;;
+            $(".my-select").click(function(event){
+                console.log($(this).val());
+                optionCourse =  $(this).val();
+                console.log(`The Course which you have chose is: ${optionCourse}`);
+                
+                if(optionCourse == "Java"){
+                    hideCourse();
+              console.log("hellow");
+              optionCourse=0;
+                $(".java").show();
+                $(".without-message").hide();
+                
+                                         
+            }
+            else if (optionCourse == "C#"){
+                hideCourse();
+                $(".c").show();
+                $(".without-message").hide();
+
+            } else if(optionCourse == "Python"){
+                hideCourse();
+                $(".python").show();
+                $(".without-message").hide();
+            }
+             else if(optionCourse == "C++"){
+                hideCourse();
+                $(".c++").show();
+                $(".without-message").hide();
+                
+            }
+            else if(optionCourse == "Css/Bootstrap"){
+                hideCourse();
+                $(".css-bootstrap").show();
+                $(".without-message").hide();
+            }
+            else if(optionCourse == "Javascript"){
+                hideCourse();
+               $(".javascript").show();
+               $(".without-message").hide();
+           }
+           else if(optionCourse == "HTML"){
+            hideCourse();
+               $(".html").show();
+               $(".without-message").hide();
+           } else{
+            hideCourse();
+            $(".without-message").show();
+           }
+            })
+                  })
+      </script>
+  </body>
+</html>

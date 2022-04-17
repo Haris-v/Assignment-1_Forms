@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./css/forAssignmentsPerStudentPerCourse.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!------------------------For Nav Bar------------------------------------->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-------------------------------------------------------------------------------------------->
+  </head>
+  <body>
+    <div id="container">
+        <header
+          class="jumbotron text-center"
+          style="background-color: rgb(156, 144, 144)"
+        >
+        <h1>DreamCode Academy</h1>
+        <p>We feed your dreams, we grow your reality </p>
+        </header>
+        <!-------------------------------------Starting of the Navigation Bar--------------------------------->
+       <!-- <div class="m-4">-->
+          <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+            <!----><div class="container-fluid"> 
+              <a href="#" class="navbar-brand">NavBar</a>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarCollapse"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="nav navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="home.html">Home</a>
+                  </li>
+  <!-------------------------------------Dropdown Menu for Students------------------------------->
+                  
+                  <li class="nav-item dropdown">
+                    <a
+                      href="#"
+                      class="nav-link dropdown-toggle"
+                      data-bs-toggle="dropdown"
+                      >Students</a
+                    >
+                    <div class="dropdown-menu">
+                      <a href="forStundents.html" class="dropdown-item">Students</a>
+                      <a href="forStundentsPerCourse.html" class="dropdown-item">Students per Course</a>
+                    </div>
+                </ul>
+                <!--------------------------Dropdown Menu for Trainers------------------------>
+                <ul class="nav navbar-nav">
+                  <li class="nav-item dropdown">
+                    <a
+                      href="#"
+                      class="nav-link dropdown-toggle"
+                      data-bs-toggle="dropdown"
+                      >Trainers</a
+                    >
+                    <div class="dropdown-menu">
+                      <a href="forTrainers.html" class="dropdown-item">Trainers</a>
+                      <a href="forTrainersPerCourse.html" class="dropdown-item">Trainers per Course</a>
+                    </div>
+                </ul>
+                 
+                <!--------------------------Dropdown Menu for Assignment per Course------------------------>
+                <ul class="nav navbar-nav">
+                  <li class="nav-item dropdown active">
+                    <a
+                      href="#"
+                      class="nav-link dropdown-toggle"
+                      data-bs-toggle="dropdown"
+                      >Assignment</a
+                    >
+                    <div class="dropdown-menu">
+                      <a href="forAssignments.html" class="dropdown-item">Assignment</a>
+                      <a href="forAssignmentsPerCourse.html" class="dropdown-item">Assignment per Course</a>
+                      <a href="forAssignmentPerStudentPerCourse.html" class="dropdown-item">Assignment per student per course</a>
+                    </div>
+                </ul>
+                <ul class="nav navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="forCourses.html">Courses</a>
+                  </li>
+                </ul>
+                </ul>
+              </div>
+           </div> 
+          </nav>
+          </div>
+  
+      <!--------------------------------------The End of Navigation Bar--------------------------------------->
+
+      <!-----------------------------Starting of the form------------------------>
+      <div class="row ">
+        <div class="col-lg-4 offset-lg-1 my-5 " >
+              <form action="">
+                <p class="bg-success bg-gradiebd">
+                    <strong>Please, add the Assignment</strong>
+                  </p>
+    <!------------------------------Form of Title--------------------->
+      <div class="form-group">
+        <label for="title">Title of the new assignment</label>
+            <input
+              type="text"
+              class="form-control"
+              id="title"
+              name="title"
+              placeholder="Please insert the title of Assignment"
+              required
+            />
+            <div class="alert alert-danger" id="lastname-error">
+              Success of Failure
+            </div>
+      </div>
+
+      <!---------------------------------Form of Submition datetime-------------------------->
+      <div class="form-group my-date">
+        <label for="submition-date " class="my-submition-date-label"
+          >Date of submition</label
+        >
+        <input
+          type="datetime-local"
+          class="form-control my-startdate my-inputstartdate"
+          name="submition-date"
+          id="submition-date"
+        />
+      </div>
+       <!-------------------------Nested Grid---------------------------->
+       <div class="row">
+        <div class="col-lg-6 ">
+          <!-----------------------------Nested grid for Oral Mark------------------->
+          <div class="form-group">
+            <label for="oral-mark">Please insert the Oral Mark</label>
+            <input
+              type="number"
+              class="form-control"
+              id="oral-mark"
+              name="oral-mark"
+              maxlength="3"
+              placeholder="Numbers only"
+              min=1
+              required
+            />
+            <div class="alert alert-danger" id="oral-mark-error">
+              Success of Failure
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 ">
+          <!-----------------------------Nested grid for Total Mark------------------->
+          <div class="form-group">
+            <label for="total-mark">Please insert the Total Mark</label>
+            <input
+              type="number"
+              class="form-control total-mark"
+              id="total-mark"
+              name="total-mark"
+              maxlength="3"
+              placeholder="Numbers only"
+              min="1"
+              required
+            />
+            <div class="alert alert-danger" id="total-mark-error">
+              Success of Failure
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--------------------------End of Nested Grid-------------------------------------->
+
+      <!-------------------------------Description-------------------------------------->
+      <div class="form-group">
+        <label for="description">Description:</label>
+        <textarea class="form-control" rows="5" id="description" name="description"></textarea>
+      </div>
+      <button type="submit" class="btn btn-info add-assignment">Add</button>
+      <button type="submit" class="btn btn-danger edit-assignment">Clear</button>
+    </form>
+  </div>
+  <!-----------------------------------End of Description----------------------------->
+
+  <div class="col-lg-4 offset-lg-1 my-5 " >
+    <p class="bg-success bg-gradiebd">
+        <strong>Please, select the fields below</strong>
+      </p>
+      <div class="form-group">
+        <label for="course-selection " class="my-select-label">Choose Student</label>
+        <select class="custom-select custom-select-dm  my-select " id="course-selection " name="course-selection ">
+          <option selected>Select...</option>
+          <optgroup label="Css/Bootstrap">
+            <option>Giannis mpoutstrapidis</option>
+            <option>Miltos Tixeris</option>
+            <option>Iakovos Tzavastroulis</option>
+          </optgroup>
+          <optgroup label="HTML">
+            <option>Stefanos Sarpidis</option>
+            <option>Kwnstantina Demeneopoulou</option>
+            <option>Petros Paskopoulos</option>
+          </optgroup>
+          <optgroup label="Javascript">
+            <option>Giorgos Frontidis</option>
+            <option>Eleni Papapetrou</option>
+            <option>Aggelos Notidiadis</option>
+          </optgroup>
+          <optgroup label="Java">
+            <option>Kwnstantina korofula</option>
+            <option>Manolis Programatistakis</option>
+            <option>Hlias Gramopoulos</option>
+          </optgroup>
+          <optgroup label="C#">
+            <option>Eleni Papapetrou</option>
+            <option>Vaso Frederiki</option>
+            <option>Python</option>
+          </optgroup>
+          <optgroup label="Python">
+            <option>Danai Ntekorou</option>
+            <option>Burwn Pithonakis</option>
+            <option>Georgia Mixaloy</option>
+          </optgroup>
+        </select>
+         <!-------------------------Nested Grid---------------------------->
+       <div class="row">
+        <div class="col-lg-6 ">
+          <!-----------------------------Nested grid for Oral Mark------------------->
+          <div class="form-group">
+            <label for="ar-mitroou">Please insert the A.M</label>
+            <input
+              type="number"
+              class="form-control"
+              id="ar-mitroou"
+              name="ar-mitroou"
+              maxlength="4"
+              placeholder="Numbers only"
+              min="1111"
+              required
+            />
+          
+          </div>
+        </div>
+        <div class="col-lg-6 ">
+          <!-----------------------------Nested grid for Total Mark------------------->
+          <div class="form-group">
+            <label for="academic-year">Insert the Academic Year</label>
+            <input
+              type="number"
+              class="form-control"
+              id="academic-year"
+              name="academic-year"
+              maxlength="4"
+              placeholder="Numbers only"
+              min="2015"
+              minlength="4"
+              required
+            />
+            
+          </div>
+         
+        </div>
+        
+      </div>
+      <button type="submit" class="btn btn-info add-student">Add</button>
+      <button type="submit" class="btn btn-danger clear-student">Clear</button>
+      <!--------------------------End of Nested Grid-------------------------------------->
+       <!--------------------------------------------Starting Nested Grid------------------------->
+       <div class="row my-5" >
+        <div class="col-lg-6 ">
+    <!--------------------------------------Starting Nested Grid of Select Course------------------->
+          <div class="form-group">
+            <label for="course-selection " class="my-select-label">Choose the Course </label>
+            <select class="custom-select custom-select-dm  my-select " id="course-selection " name="course-selection ">
+              <option selected>Select Course...</option>
+              <optgroup label="Front-end">
+                <option>Css/Bootstrap</option>
+                <option>HTML</option>
+                <option>Javascript</option>
+              </optgroup>
+              <optgroup label="Back-end">
+                <option>Java</option>
+                <option>C#</option>
+                <option>Python</option>
+                <option>C++</option>
+              </optgroup>
+            </select>
+         </div>
+        </div>
+    <!--------------------------------------Ending Nested Grid of Select Course------------------->
+    <!--------------------------------------Starting Nested Grid of Type Course------------------->
+
+        <div class="col-lg-6 ">
+          <div class="form-group">
+            <label for="course-selection-type " class="my-selection-label">Type Course  </label>
+            <select class="custom-select   custom-select-dm my-selection-type" id="course-selection-type" name="course-selection-type" >
+              <option selected>Choose... </option>
+              <option value="1">Full-time</option>
+              <option value="2">Part-time</option>
+            </select>
+            <button type="submit" class="btn btn-info add" >Add</button>
+           <button type="submit" class="btn btn-danger clear">Clear</button>
+          </div>
+       
+           </div>
+           
+          </div>
+            
+     </div>
+    </div>
+
+    <!----------------------End of Second Columb------------------------------>
+  </div>
+ 
+   </form>
+   
+        </div>
+
+    <!---------------------------------------Second-------------------------------->
+        <div class="row ">
+            <div class="col-lg-4 offset-lg-1 my-5 " >
+                  <form action="">
+                    <p class="bg-success bg-gradiebd">
+                        <strong>Please, Edit the Assignment</strong>
+                      </p>
+        <!------------------------------Form of Title--------------------->
+          <div class="form-group">
+            <label for="title-2">Title of the new assignment</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="title-2"
+                  name="title-2"
+                  placeholder="Please insert the title of Assignment"
+                  required
+                />
+                <div class="alert alert-danger" id="title-error-2">
+                  Success of Failure
+                </div>
+          </div>
+    
+          <!---------------------------------Form of Submition datetime-------------------------->
+          <div class="form-group my-date">
+            <label for="submition-date " class="my-submition-date-label"
+              >Date of submition</label
+            >
+            <input
+              type="datetime-local"
+              class="form-control my-startdate my-inputstartdate"
+              name="submition-date"
+              id="submition-date"
+            />
+          </div>
+           <!-------------------------Nested Grid---------------------------->
+           <div class="row">
+            <div class="col-lg-6 ">
+              <!-----------------------------Nested grid for Oral Mark------------------->
+              <div class="form-group">
+                <label for="oral-mark-2">Please insert the Oral Mark</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="oral-mark-2"
+                  name="oral-mark-2"
+                  maxlength="3"
+                  placeholder="Numbers only"
+                  min="1"
+                  required
+                />
+                <div class="alert alert-danger" id="oral-mark-error-2">
+                  Success of Failure
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 ">
+              <!-----------------------------Nested grid for Total Mark------------------->
+              <div class="form-group">
+                <label for="total-mark-2">Please insert the Total Mark</label>
+                <input
+                  type="number"
+                  class="form-control total-mark"
+                  id="total-mark-2"
+                  name="total-mark-2"
+                  maxlength="3"
+                  placeholder="Numbers only"
+                  min="1"
+                  required
+                />
+                <div class="alert alert-danger" id="total-mark-error-2">
+                  Success of Failure
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--------------------------End of Nested Grid-------------------------------------->
+    
+          <!-------------------------------Description-------------------------------------->
+          <div class="form-group">
+            <label for="description">Description:</label>
+            <textarea class="form-control" rows="5" id="description" name="description"></textarea>
+          </div>
+          <button type="submit" class="btn btn-info add-assignment">Edit</button>
+          <button type="submit" class="btn btn-danger edit-assignment">Clear</button>
+        </form>
+      </div>
+      <!-----------------------------------End of Description----------------------------->
+    
+      <div class="col-lg-4 offset-lg-1 my-5 " >
+        <p class="bg-success bg-gradiebd">
+            <strong>Please, select the fields below</strong>
+          </p>
+          <div class="form-group">
+            <label for="course-selection " class="my-select-label">Choose Student</label>
+            <select class="custom-select custom-select-dm  my-select " id="course-selection " name="course-selection ">
+              <option selected>Select...</option>
+              <optgroup label="Css/Bootstrap">
+                <option>Giannis mpoutstrapidis</option>
+                <option>Miltos Tixeris</option>
+                <option>Iakovos Tzavastroulis</option>
+              </optgroup>
+              <optgroup label="HTML">
+                <option>Stefanos Sarpidis</option>
+                <option>Kwnstantina Demeneopoulou</option>
+                <option>Petros Paskopoulos</option>
+              </optgroup>
+              <optgroup label="Javascript">
+                <option>Giorgos Frontidis</option>
+                <option>Eleni Papapetrou</option>
+                <option>Aggelos Notidiadis</option>
+              </optgroup>
+              <optgroup label="Java">
+                <option>Kwnstantina korofula</option>
+                <option>Manolis Programatistakis</option>
+                <option>Hlias Gramopoulos</option>
+              </optgroup>
+              <optgroup label="C#">
+                <option>Eleni Papapetrou</option>
+                <option>Vaso Frederiki</option>
+                <option>Python</option>
+              </optgroup>
+              <optgroup label="Python">
+                <option>Danai Ntekorou</option>
+                <option>Burwn Pithonakis</option>
+                <option>Georgia Mixaloy</option>
+              </optgroup>
+            </select>
+             <!-------------------------Nested Grid---------------------------->
+           <div class="row">
+            <div class="col-lg-6 ">
+              <!-----------------------------Nested grid for Oral Mark------------------->
+              <div class="form-group">
+                <label for="ar-mitroou-2">Please insert the A.M</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="ar-mitroou-2"
+                  name="ar-mitroou-2"
+                  maxlength="4"
+                  placeholder="Numbers only"
+                  min="1111"
+                   required
+                />
+               
+              </div>
+            </div>
+            <div class="col-lg-6 ">
+              <!-----------------------------Nested grid for Total Mark------------------->
+              <div class="form-group">
+                <label for="academic-year-2">Insert the Academic Year</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="academic-year-2"
+                  name="academic-year-2"
+                  maxlength="4"
+                  placeholder="Numbers only"
+                  min="2015"
+                  minlength="4"
+                  required
+                />
+                
+              </div>
+             
+            </div>
+            
+          </div>
+          <button type="submit" class="btn btn-info add-student">Edit</button>
+          <button type="submit" class="btn btn-danger clear-student">Clear</button>
+          <!--------------------------End of Nested Grid-------------------------------------->
+           <!--------------------------------------------Starting Nested Grid------------------------->
+           <div class="row my-5" >
+            <div class="col-lg-6 ">
+        <!--------------------------------------Starting Nested Grid of Select Course------------------->
+              <div class="form-group">
+                <label for="course-selection " class="my-select-label">Choose the Course </label>
+                <select class="custom-select custom-select-dm  my-select " id="course-selection " name="course-selection ">
+                  <option selected>Select Course...</option>
+                  <optgroup label="Front-end">
+                    <option>Css/Bootstrap</option>
+                    <option>HTML</option>
+                    <option>Javascript</option>
+                  </optgroup>
+                  <optgroup label="Back-end">
+                    <option>Java</option>
+                    <option>C#</option>
+                    <option>Python</option>
+                    <option>C++</option>
+                  </optgroup>
+                </select>
+             </div>
+            </div>
+        <!--------------------------------------Ending Nested Grid of Select Course------------------->
+        <!--------------------------------------Starting Nested Grid of Type Course------------------->
+    
+            <div class="col-lg-6 ">
+              <div class="form-group">
+                <label for="course-selection-type " class="my-selection-label">Type Course  </label>
+                <select class="custom-select   custom-select-dm my-selection-type" id="course-selection-type" name="course-selection-type" >
+                  <option selected>Choose... </option>
+                  <option value="1">Full-time</option>
+                  <option value="2">Part-time</option>
+                </select>
+                <button type="submit" class="btn btn-info add" >Edit</button>
+               <button type="submit" class="btn btn-danger clear">Clear</button>
+              </div>
+           
+               </div>
+               
+              </div>
+                
+         </div>
+        </div>
+    
+        <!----------------------End of Second Columb------------------------------>
+      </div>
+     
+       </form>
+       
+            </div>
+            
+        
+       <!----------------------------Begin of Footer-------------------------->
+    <footer class="jumbotron text-center">
+        <!-- <div class="row"> 
+          <div id="col-lg-4"> -->
+        <div class=""></div>
+        <a href="https://www.facebook.com" target="_blank">
+          <img
+            src="./images/facebookicon.png"
+            alt="FaceBook image"
+            class="smi facebook"
+          />
+        </a>
+  
+        <!--<div id="col-lg-4"> -->
+        <a href="https://www.linkedin.com" target="_blank">
+          <img
+            src="./images/linkedin.png"
+            alt="Linkedin image"
+            class="smi linkedin"
+        /></a>
+  
+        <!-- <div id="col-lg-4">-->
+        <a href="https://www.youtube.com" target="_blank">
+          <img src="./images/youtube.png" alt="youtube image" class="smi youtube"
+        /></a>
+  
+        <p class="headcontact">Contact us</p>
+        <div class="containerfooter">
+          <div>
+            <img
+            src="./images/Location_Icon-512.png"
+            alt="Location arrow icon"
+            class="imgfooter"
+          />Κυψέλης 61, Αθήνα 113 62
+        </div>
+        <div class="tel">
+          <img
+            src="./images/telephone1.png"
+            alt="telephone icon"
+            class="imgfooter"
+          />+30-2109899999
+        </div>
+          <div>
+            <img src="./images/emailicon.png" alt="emai icon" class="imgfooter" />
+            harveraros@gmail.com
+          </div>
+        </div>
+      </footer>
+      <!---------------------------------End of Footer--------------------------------------------------->
+
+
+      <script>
+        $(document).ready(function () {
+  
+          
+          $("#lastname-error").hide();
+          $("#title-error-2").hide();
+          $("#oral-mark-error").hide();
+          $("#oral-mark-error-2").hide();
+          $("#total-mark-error").hide();
+          $("#total-mark-error-2").hide();
+  
+  
+  
+          var error_lname = "";
+          var error_tname = "";
+          var error_omark = "";
+          var error_omark2 = "";
+          var error_tmark = "";
+          var error_tmark2 = "";
+  
+       
+          $("#lastname").focusout(function () {
+            checkLastName();
+          });
+  
+          $("#title-2").focusout(function () {
+            checkTitle();
+          });
+          $("#oral-mark").focusout(function () {
+            checkOralMark();
+          });
+          $("#oral-mark-2").focusout(function () {
+            checkOralMark2();
+          });
+          $("#total-mark").focusout(function () {
+            checkTotalMark();
+          });
+          $("#total-mark-2").focusout(function () {
+            checkTotalMark2();
+          });
+  
+          function checkTitle() {
+            var pattern = /^[a-zA-Z]*$/;
+            var tile2 = $("#title-2").val();
+            if (pattern.test(title2) && title2 !== "") {
+              $("#title-error-2").hide();
+              $("#title-2").css({ "border-bottom": "2px solid #34f458" });
+              $("input[type=text]").val(function () {
+                return this.value.toUpperCase();
+              });
+            } else {
+              $("#title-error-2")
+                .show()
+                .html("Should contain only characters!");
+              error_tname = "true";
+            }
+          }
+  
+          function checkLastName() {
+            var pattern = /^[a-zA-Z]*$/;
+            var lastName = $("#lastname").val();
+            if (pattern.test(lastName) && lastName !== "") {
+              $("#lastname-error").hide();
+              $("#lastname").css({ "border-bottom": "2px solid #34f458" });
+              $("input[type=text]").val(function () {
+                return this.value.toUpperCase();
+              });
+            } else {
+              $("#lastname-error").show().html("Should contain only characters!");
+              error_lname = "true";
+            }
+          }
+  
+          function checkOralMark() {
+            var pattern = /^[0-9]*$/;
+            var oralMark = $("#oral-mark").val();
+            if (pattern.test(oralMark) && oralMark !== "") {
+              $("#oral-mark-error").hide();
+              $("#oral-mark").css({ "border-bottom": "2px solid #34f458" });
+              $("input[type=text]").val(function () {
+                return this.value.toUpperCase();
+              });
+            } else {
+              $("#oral-mark-error").show().html("Should contain only numbers!");
+              error_omark = "true";
+            }
+          }
+  
+          function checkOralMark2() {
+            var pattern = /^[0-9]*$/;
+            var oralMark2 = $("#oral-mark-2").val();
+            if (pattern.test(oralMark2) && oralMark2 !== "") {
+              $("#oral-mark-error-2").hide();
+              $("#oral-mark-2").css({ "border-bottom": "2px solid #34f458" });
+              $("input[type=text]").val(function () {
+                return this.value.toUpperCase();
+              });
+            } else {
+              $("#oral-mark-error-2").show().html("Should contain only numbers!");
+              error_omark2 = "true";
+            }
+          }
+  
+          function checkTotalMark() {
+            var pattern = /^[0-9]*$/;
+            var totalMark = $("#total-mark").val();
+            if (pattern.test(totalMark) && totalMark !== "") {
+              $("#total-mark-error").hide();
+              $("#total-mark").css({ "border-bottom": "2px solid #34f458" });
+              $("input[type=text]").val(function () {
+                return this.value.toUpperCase();
+              });
+            } else {
+              $("#total-mark-error").show().html("Should contain only numbers!");
+              error_tmark = "true";
+            }
+          }
+  
+          function checkTotalMark2() {
+            var pattern = /^[0-9]*$/;
+            var totalMark2 = $("#total-mark-2").val();
+            if (pattern.test(totalMark2) && totalMark2 !== "") {
+              $("#total-mark-error-2").hide();
+              $("#total-mark-2").css({ "border-bottom": "2px solid #34f458" });
+              $("input[type=text]").val(function () {
+                return this.value.toUpperCase();
+              });
+            } else {
+              $("#total-mark-error-2").show().html("Should contain only numbers!");
+              error_tmark2 = "true";
+            }
+          }
+
+//=================================VALIDATION=======================================
+        $("#lastname-error").hide();
+        $("#title-error-2").hide();
+        $("#oral-mark-error").hide();
+        $("#oral-mark-error-2").hide();
+        $("#total-mark-error").hide();
+        $("#total-mark-error-2").hide();
+      
+
+
+
+        var error_lname = "";
+        var error_tname = "";
+        var error_omark = "";
+        var error_omark2 = "";
+        var error_tmark = "";
+        var error_tmark2 = "";
+       
+
+     
+        $("#lastname").focusout(function () {
+          checkLastName();
+        });
+        $("#lastname").focusout(function () {
+          checkLastName();
+        });
+
+        $("#title-2").focusout(function () {
+          checkTitle();
+        });
+        $("#oral-mark").focusout(function () {
+          checkOralMark();
+        });
+        $("#oral-mark-2").focusout(function () {
+          checkOralMark2();
+        });
+        $("#total-mark").focusout(function () {
+          checkTotalMark();
+        });
+        $("#total-mark-2").focusout(function () {
+          checkTotalMark2();
+        });
+
+        function checkArMitroou() {
+          var pattern = /^[a-zA-Z]*$/;
+          var armitroou = $("#ar-mitroou").val();
+          if (pattern.test(armitroou) && armitroou !== "") {
+            $("#ar-mitroou-error").hide();
+            $("#ar-mitroou").css({ "border-bottom": "2px solid #34f458" });
+            $("input[type=text]").val(function () {
+              return this.value.toUpperCase();
+            });
+          } else {
+            $("#ar-mitroou")
+              .show()
+              .html("Should contain only characters!");
+              error_armitroou= "true";
+          }
+        }
+        function checkArMitroou2() {
+          var pattern = /^[a-zA-Z]*$/;
+          var armitroou2 = $("#ar-mitroou-2").val();
+          if (pattern.test(armitroou) && armitroou !== "") {
+            $("#ar-mitroou-error-2").hide();
+            $("#ar-mitroou-2").css({ "border-bottom": "2px solid #34f458" });
+            $("input[type=text]").val(function () {
+              return this.value.toUpperCase();
+            });
+          } else {
+            $("#ar-mitroou-2")
+              .show()
+              .html("Should contain only characters!");
+              error_armitroou2= "true";
+          }
+        }
+        function checkTitle() {
+          var pattern = /^[a-zA-Z]*$/;
+          var tile2 = $("#title-2").val();
+          if (pattern.test(title2) && title2 !== "") {
+            $("#title-error-2").hide();
+            $("#title-2").css({ "border-bottom": "2px solid #34f458" });
+            $("input[type=text]").val(function () {
+              return this.value.toUpperCase();
+            });
+          } else {
+            $("#title-error-2")
+              .show()
+              .html("Should contain only characters!");
+            error_tname = "true";
+          }
+        }
+        function checkTitle() {
+          var pattern = /^[a-zA-Z]*$/;
+          var tile2 = $("#title-2").val();
+          if (pattern.test(title2) && title2 !== "") {
+            $("#title-error-2").hide();
+            $("#title-2").css({ "border-bottom": "2px solid #34f458" });
+            $("input[type=text]").val(function () {
+              return this.value.toUpperCase();
+            });
+          } else {
+            $("#title-error-2")
+              .show()
+              .html("Should contain only characters!");
+            error_tname = "true";
+          }
+        }
+        function checkTitle() {
+          var pattern = /^[a-zA-Z]*$/;
+          var tile2 = $("#title-2").val();
+          if (pattern.test(title2) && title2 !== "") {
+            $("#title-error-2").hide();
+            $("#title-2").css({ "border-bottom": "2px solid #34f458" });
+            $("input[type=text]").val(function () {
+              return this.value.toUpperCase();
+            });
+          } else {
+            $("#title-error-2")
+              .show()
+              .html("Should contain only characters!");
+            error_tname = "true";
+          }
+        }
+
+        function checkLastName() {
+          var pattern = /^[a-zA-Z]*$/;
+          var lastName = $("#lastname").val();
+          if (pattern.test(lastName) && lastName !== "") {
+            $("#lastname-error").hide();
+            $("#lastname").css({ "border-bottom": "2px solid #34f458" });
+            $("input[type=text]").val(function () {
+              return this.value.toUpperCase();
+            });
+          } else {
+            $("#lastname-error").show().html("Should contain only characters!");
+            error_lname = "true";
+          }
+        }
+
+        function checkOralMark() {
+          var pattern = /^[0-9]*$/;
+          var oralMark = $("#oral-mark").val();
+          if (pattern.test(oralMark) && oralMark !== "") {
+            $("#oral-mark-error").hide();
+            $("#oral-mark").css({ "border-bottom": "2px solid #34f458" });
+            $("input[type=text]").val(function () {
+              return this.value.toUpperCase();
+            });
+          } else {
+            $("#oral-mark-error").show().html("Should contain only numbers!");
+            error_omark = "true";
+          }
+        }
+
+        function checkOralMark2() {
+          var pattern = /^[0-9]*$/;
+          var oralMark2 = $("#oral-mark-2").val();
+          if (pattern.test(oralMark2) && oralMark2 !== "") {
+            $("#oral-mark-error-2").hide();
+            $("#oral-mark-2").css({ "border-bottom": "2px solid #34f458" });
+            $("input[type=text]").val(function () {
+              return this.value.toUpperCase();
+            });
+          } else {
+            $("#oral-mark-error-2").show().html("Should contain only numbers!");
+            error_omark2 = "true";
+          }
+        }
+
+        function checkTotalMark() {
+          var pattern = /^[0-9]*$/;
+          var totalMark = $("#total-mark").val();
+          if (pattern.test(totalMark) && totalMark !== "") {
+            $("#total-mark-error").hide();
+            $("#total-mark").css({ "border-bottom": "2px solid #34f458" });
+            $("input[type=text]").val(function () {
+              return this.value.toUpperCase();
+            });
+          } else {
+            $("#total-mark-error").show().html("Should contain only numbers!");
+            error_tmark = "true";
+          }
+        }
+
+        function checkTotalMark2() {
+          var pattern = /^[0-9]*$/;
+          var totalMark2 = $("#total-mark-2").val();
+          if (pattern.test(totalMark2) && totalMark2 !== "") {
+            $("#total-mark-error-2").hide();
+            $("#total-mark-2").css({ "border-bottom": "2px solid #34f458" });
+            $("input[type=text]").val(function () {
+              return this.value.toUpperCase();
+            });
+          } else {
+            $("#total-mark-error-2").show().html("Should contain only numbers!");
+            error_tmark2 = "true";
+          }
+        }
+        });
+      </script>
+  </body>
+</html>
